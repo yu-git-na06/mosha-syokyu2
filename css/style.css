@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+
+/* common */
+.common-wrapper{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.common-wrapper h2{
+    font-size: 26px;
+    margin: 80px;
+    text-align: center;
+}
+
+/* header */
+.header{
+    position: absolute; /*headerの下に画像を配置*/
+    padding: 30px;
+    width: 95%;
+    z-index: 1;
+}
+
+.header-inner{
+    display: flex; /*要素を横並びする*/
+    justify-content: space-between;
+    color: white;
+}
+
+.header-rogo{
+    font-size: 40px;
+}
+
+.header-nav{
+    display: none;
+}
+
+.hamburger__btn{
+    font-size: 40px;
+}
+
+/* mv */
+.mv{
+
+}
+
+.mv-inner{
+}
+
+.first-view{
+    position: relative;
+}
+
+.first-view img{
+    width: 100%;
+    height: 100%;
+}
+
+.mv-text{
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 40px;
+}
+
+/* gallary */
+.gallary{
+        margin: 100px 0;
+}
+
+.gallary-block{
+    display: flex;
+}
+
+.gallary-block-left{
+    width: 33%;
+}
+
+.gallary-block-center{
+    width: 33%;
+    margin: 0 20px
+}
+
+.gallary-block-right{
+    width: 33%;
+}
+
+.gallary-block-img{
+    margin: 20px 0;
+    
+}
+
+.gallary-block-img img{
+    width: 100%;
+    
+}
+
+/* contact */
+.contact{
+        margin: 100px 0;
+}
+
+.contact form{
+
+}
+
+.contact-form-block{
+    display: flex;
+    justify-content:space-between;
+    height: 40px;
+    margin: 20px
+}
+
+.contact-form-block label{
+
+}
+
+.contact-form-block input,select,textarea{
+    width: 50%;
+}
+
+.contact-form-block textarea{
+    resize: vertical;
+    height: 100px;
+}
+
+
+/* sns */
+.sns{
+    display: flex;
+    margin: 100px 0;
+}
+
+.sns-block{
+}
+
+.sns-block-first{
+    display: flex;
+}
+
+.sns-block-second{
+    display: flex;
+}
+
+.sns-block-content{
+    margin:50px;
+    text-align: center;
+}
+
+.sns-block-content a{
+    display: block;
+    background-color: #9DC5D0;
+    padding:20px 30px;
+    font-size: 20px;
+    width: 140px;
+    height: 30px;
+    align-content: center;
+}
+
+.sns-block-content :hover{
+    background-color:#335D91;
+    color:white;
+}
+
+.sns-block-content i{
+    margin-right: 20px
+    
+}
+
+
+/* footer */
+.footer{
+    text-align: center;
+    padding: 30px 0; 
+    background-color:#335D91;
+    color:white;
+    
+}
+
+
+

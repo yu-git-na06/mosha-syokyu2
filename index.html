@@ -11,18 +11,18 @@
 <body>
     <!-- header -->
     <header class="header">
-        <div class="header-inner">
+        <div class="header-inner common-wrapper">
             <div class="header-rogo">
                 <a href="#">M.T.</a>
             </div>
-            <ul class="header-menu">
+            <ul class="header-nav">
                 <li><a href="#">ギャラリー</a></li>
                 <li><a href="#">お問い合わせ</a></li>
                 <li><a href="#">SNS</a></li>
             </ul>
             <!-- ハンバーガーボタン -->
             <div id="btn" class="hamburger__btn">
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars common-wrapper"></i>
             </div>
         </div>
     </header>
@@ -30,37 +30,43 @@
     <!-- main -->
     <!-- mv -->
     <section class="mv">
-        <picture class="first-view"><img src="img/ocean.png" alt="トップ画像"></picture>
-        <h1 class="mv-text">MATSUO TAKUMI</h1>
+        <div class="mv-inner">
+            <div class="first-view">
+                <img src="img/ocean.png" alt="トップ画像">
+                <h1 class="mv-text common-wrapper">MATSUO TAKUMI</h1>
+            </div>
+        </div>
     </section>
 
+    <!-- gallary -->
     <section class="gallary">
         <div class="common-wrapper">
             <h2>ギャラリー</h2>
             <div class="gallary-block">
                 <div class="gallary-block-left">
-                    <img src="img/scooter.png" alt="スクーター画像">
-                    <img src="img/sunset.png" alt="夕焼け画像">
+                    <div class="gallary-block-img"><img src="img/scooter.png" alt="スクーター画像"></div>
+                    <div class="gallary-block-img"><img src="img/sunset.png" alt="夕焼け画像"></div>
                 </div>
                 <div class="gallary-block-center">
-                    <img src="img/cityspace.png" alt="街の景観">
-                    <img src="img/beach.png" alt="ビーチの画像">
+                    <div class="gallary-block-img"><img src="img/cityspace.png" alt="街の景観"></div>
+                    <div class="gallary-block-img"><img src="img/beach.png" alt="ビーチの画像"></div>
                 </div>
                 <div class="gallary-block-right">
-                    <img src="img/backstreet.png" alt="路地画像">
+                    <div class="gallary-block-img"><img src="img/backstreet.png" alt="路地画像"></div>
                 </div>
             </div>
     </section> 
 
+    <!-- contact -->
     <section class="contact">
         <div class="common-wrapper">
             <h2>お問い合わせ</h2>
             <form action="" method="post">
-                <div>
+                <div class="contact-form-block">
                     <label for="name">お名前</label>
                     <input type="text" name="name" value="" placeholder="入力してください">
                 </div>
-                <div>
+                <div class="contact-form-block">
                     <label for="content">ご用件</label>
                     <select name="" id="content">
                         <option value="">選択してください</option>
@@ -69,38 +75,39 @@
                         <option value="">その他</option>
                     </select>
                 </div>
-                <div>
+                <div class="contact-form-block">
                     <label for="email">メールアドレス</label>
                     <input type="text" name="email" value="" placeholder="入力してください">
                 </div>
-                <div>
+                <div class="contact-form-block">
                     <label for="textarea">お問い合わせ内容</label>
-                    <textarea name="textarea" cols="20" rows="5" placeholder="入力してください"></textarea>
+                    <textarea name="textarea" cols="20" rows="5" style="box-sizing: border-box;" placeholder="入力してください"></textarea>
                 </div>
             </form> 
         </div>
-
     </section>
 
+
+    <!-- sns -->
     <section class="sns">
         <div class="common-wrapper">
             <h2>SNS</h2>
             <div class="sns-block">
-                <div class="sns-tw">
-                    <i class="fab fa-twitter"></i>
-                    <p>twitter</p>
+                <div class="sns-block-first">
+                    <div class="sns-block-content">
+                        <a href=""><i class="fab fa-twitter"></i>twitter</a>
+                    </div>
+                    <div class="sns-block-content">
+                        <a href=""><i class="fab fa-facebook"></i>facebook</a>
+                    </div>
                 </div>
-                <div class="sns-fb">
-                    <i class="fab fa-facebook"></i>
-                    <p>facebook</p>
-                </div>
-                <div class="sns-ig">
-                    <i class="fab fa-instagram"></i>
-                    <p>Instagram</p>
-                </div>
-                <div class="sns-line">
-                    <i class="fab fa-line"></i>
-                    <p>LINE</p>
+                <div class="sns-block-second">
+                    <div class="sns-block-content">
+                        <a href=""><i class="fab fa-instagram"></i>Instagram</a>
+                    </div>
+                    <div class="sns-block-content">
+                        <a href=""><i class="fab fa-line"></i>LINE</a>
+                    </div>
                 </div>
             </div>
         </div>
