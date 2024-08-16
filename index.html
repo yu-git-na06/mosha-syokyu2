@@ -15,7 +15,7 @@
             <div class="header-rogo">
                 <a href="#">M.T.</a>
             </div>
-            <ul class="header-nav">
+            <ul id="menu" class="header-nav">
                 <li><a href="#">ギャラリー</a></li>
                 <li><a href="#">お問い合わせ</a></li>
                 <li><a href="#">SNS</a></li>
@@ -24,7 +24,9 @@
             <div id="btn" class="hamburger__btn">
                 <i class="fas fa-bars common-wrapper"></i>
             </div>
+            <!-- モーダルウィンドウ  -->
         </div>
+        <div id="modal" class="modal-sp"></div>
     </header>
 
     <!-- main -->
@@ -40,7 +42,7 @@
 
     <!-- gallary -->
     <section class="gallary">
-        <div class="common-wrapper">
+        <div class="gallary-inner common-wrapper">
             <h2>ギャラリー</h2>
             <div class="gallary-block">
                 <div class="gallary-block-left">
@@ -59,7 +61,7 @@
 
     <!-- contact -->
     <section class="contact">
-        <div class="common-wrapper">
+        <div class="contact-inner common-wrapper">
             <h2>お問い合わせ</h2>
             <form action="" method="post">
                 <div class="contact-form-block">
@@ -90,7 +92,7 @@
 
     <!-- sns -->
     <section class="sns">
-        <div class="common-wrapper">
+        <div class="sns-inner common-wrapper">
             <h2>SNS</h2>
             <div class="sns-block">
                 <div class="sns-block-first">
@@ -117,5 +119,7 @@
     <footer class="footer">
         <p>2022 ©︎ MATSUO TAKUMI All Rights Reserved.</p>
     </footer>
+
+    <script src="./hamburger.js"></script>
 </body>
 </html>
