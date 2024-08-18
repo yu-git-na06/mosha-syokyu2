@@ -38,7 +38,32 @@
     display: none;
 }
 
-
+/*×ボタン*/
+.batsu {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30px;
+  }
+  
+  .batsu::before, .batsu::after { /* 共通設定 */
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px; /* 棒の幅（太さ） */
+    height: 30px; /* 棒の高さ */
+    background: #333;
+  }
+  
+  .batsu::before {
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+  
+  .batsu::after {
+    transform: translate(-50%,-50%) rotate(-45deg);
+  }
+  
 /*ハンバーガーボタン*/
 .hamburger__btn{
     font-size: 40px;
@@ -48,7 +73,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #ffffffdd;
+    background-color: white;
     display: block;
     width: 30%;
     height: 100vh;
@@ -56,10 +81,10 @@
     z-index: 2;
 }
 
-.add-menu-sp li{
-    font-weight: bold;
-    margin: 50px auto;
-    text-align: center;
+.add-header-nav li{
+    font-weight: normal;
+    margin: 50px 0 0 20px;
+    font-size: 18px;
 }
 
 .add-header-nav{
@@ -69,25 +94,15 @@
 }
 
 /* モーダルウィンドウ */
-.add-modal-sp{
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    display: block; 
-    background-color: #000000aa;
-    z-index: 1; 
-}
 
 /* mv */
 .first-view{
     position: relative;
+    width: 100%;
 }
 
 .first-view img{
     width: 100%;
-    height: 100%;
 }
 
 .mv-text{
@@ -139,8 +154,6 @@
 .contact{
     margin: 100px 0;
 }
-
-.contact-inner{}
 
 .contact-form-block{
     display: flex;
@@ -202,7 +215,6 @@
     font-size: 40px;
 }
 
-
 /* footer */
 .footer{
     text-align: center;
@@ -210,6 +222,110 @@
     background-color:#335D91;
     color:white;
     
+}
+
+/* レスポンシブ */
+@media screen and (max-width: 800px){
+    /* common-mob */
+    .common-wrapper{
+        max-width: 800px;
+    }
+
+    .common-wrapper h2{
+        font-size: 30px;
+        margin: 30px;
+    }
+
+    /* header-mob */
+    .header{
+        padding: 0px;
+        width: 100%;
+    }
+
+    .header-rogo{
+        font-size: 40px;
+    }
+
+    /*×ボタン*/
+    
+    /*ハンバーガーボタン*/
+    .add-header-nav li{
+        font-size: 26px;
+    }
+
+    /* モーダルウィンドウ */
+    
+    /* mv-mob */
+    .first-view{
+        position: relative;
+    }
+
+    .first-view img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .mv-text{
+        top: 50%;
+        right: 0%;
+        font-size: 20px;
+    }
+
+    /* gallary-mob */
+    .gallary-block{
+        display: block;
+    }
+
+    .gallary-block-left{
+        width: 100%;
+    }
+
+    .gallary-block-center{
+        width: 100%;
+        margin: 0px;
+    }
+
+    .gallary-block-right{
+        width: 100%;
+    }
+
+    .gallary-block-img{
+        margin: 20px;
+        height: 250px;
+    }
+
+    .gallary-block-img img{
+        object-fit: cover; /*効いていない*/
+    }
+
+    /* contact-mob */
+    .contact-form-block{
+        display: block;
+    }
+
+    .contact-form-block input,select,textarea{
+        min-width: 100%;
+    }
+
+    /* sns-mob */
+    .sns{
+        display: flex;
+    }
+
+    .sns-block-first{
+        display: block;
+    }
+
+    .sns-block-second{
+        display: block;
+    }
+
+    /* footer-mob */
+    .footer{
+        text-align: center;
+        padding: 30px; 
+        font-size: 12px;
+    }   
 }
 
 
