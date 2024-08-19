@@ -129,15 +129,27 @@
 
 .gallary-block-left{
     width: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .gallary-block-center{
     width: 33%;
-    margin: 0 20px
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .gallary-block-right{
     width: 33%;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
 }
 
 .gallary-block-img{
@@ -202,7 +214,7 @@
     width: 200px;
     height: 60px;
     align-items: center;
-    align-content: center;
+    /* align-content: center; */
 }
 
 .sns-block-content :hover{
