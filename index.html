@@ -15,14 +15,14 @@
             <div class="header-rogo">
                 <a href="#">M.T.</a>
             </div>
-            <div class="header-nav-wrapper">
-                <ul id="menu" class="header-nav">
+            <div id="menu" class="header-nav-wrapper">
+                <!-- ×ボタン -->
+                <div id="batsu" class="batsu"></div>
+                <ul class="header-nav">
                     <li><a href="#">ギャラリー</a></li>
                     <li><a href="#">お問い合わせ</a></li>
                     <li><a href="#">SNS</a></li>
                 </ul>
-                <!-- ×ボタン -->
-                <div id="batsu" class="batsu"></div>
             </div>
             <!-- ハンバーガーボタン -->
             <div id="btn" class="hamburger__btn">
@@ -38,7 +38,11 @@
     <section class="mv">
         <div class="mv-inner">
             <div class="first-view">
-                <img src="img/ocean.png" alt="トップ画像">
+                <!-- <img src="img/ocean.png" alt="トップ画像"> -->
+                <picture>
+                    <source srcset="img/ocean.png" media="(min-width: 800px)" type="image/png">
+                    <img src="img/ocean-sp.png" alt="メインヴィジュアル画像">
+                </picture>
                 <h1 class="mv-text common-wrapper">MATSUO TAKUMI</h1>
             </div>
         </div>
@@ -50,15 +54,30 @@
             <h2>ギャラリー</h2>
             <div class="gallary-block">
                 <div class="gallary-block-left">
-                    <div class="gallary-block-img"><img src="img/scooter.png" alt="スクーター画像"></div>
-                    <div class="gallary-block-img"><img src="img/sunset.png" alt="夕焼け画像"></div>
-                </div>
+                    <picture class="gallary-block-img">
+                        <source srcset="img/scooter.png" media="(min-width: 800px)" type="image/png">
+                        <img src="img/scooter-sp.png" alt="スクーター画像">
+                    </picture>
+                    <picture class="gallary-block-img">
+                        <source srcset="img/sunset.png" media="(min-width: 800px)" type="image/png">
+                        <img src="img/sunset-sp.png" alt="夕焼け画像">
+                    </picture>
+               </div>
                 <div class="gallary-block-center">
-                    <div class="gallary-block-img"><img src="img/cityspace.png" alt="街の景観"></div>
-                    <div class="gallary-block-img"><img src="img/beach.png" alt="ビーチの画像"></div>
+                    <picture class="gallary-block-img">
+                        <source srcset="img/cityspace.png" media="(min-width: 800px)" type="image/png">
+                        <img src="img/cityspace-sp.png" alt="街の景観">
+                    </picture>
+                    <picture class="gallary-block-img">
+                        <source srcset="img/beach.png" media="(min-width: 800px)" type="image/png">
+                        <img src="img/beach-sp.png" alt="ビーチの画像">
+                    </picture>
                 </div>
                 <div class="gallary-block-right">
-                    <div class="gallary-block-img"><img src="img/backstreet.png" alt="路地画像"></div>
+                    <picture class="gallary-block-img">
+                        <source srcset="img/backstreet.png" media="(min-width: 800px)" type="image/png">
+                        <img src="img/backstreet-sp.png" alt="路地画像">
+                    </picture>
                 </div>
             </div>
         </div>

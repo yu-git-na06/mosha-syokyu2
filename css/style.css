@@ -19,9 +19,16 @@
 /* header */
 .header{
     position: absolute; /*headerの下に画像を配置*/
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 30px;
     width: 95%;
     z-index: 1;
+    text-align: :center;
+    align-items: :center;
+    margin:  0 auto;
 }
 
 .header-inner{
@@ -34,7 +41,7 @@
     font-size: 40px;
 }
 
-.header-nav{
+.header-nav-wrapper{
     display: none;
 }
 
@@ -85,15 +92,19 @@
     font-weight: normal;
     margin: 50px 0 0 20px;
     font-size: 18px;
-}
-
-.add-header-nav{
-    display: block; /*ハンバーガーボタンを押した時にメニューを表示*/
-    z-index: 2;
     color: black;
 }
 
-/* モーダルウィンドウ */
+.add-modal-sp{
+    position: fixed; /* *1 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: block; /* *3 */
+    background-color: #000000aa;
+    z-index: 1; /* ※2 */
+}
 
 /* mv */
 .first-view{
@@ -101,7 +112,7 @@
     width: 100%;
 }
 
-.first-view img{
+.first-view picture{
     width: 100%;
 }
 
@@ -117,10 +128,6 @@
 /* gallary */
 .gallary{
     margin: 100px 0;
-}
-
-.gallary-inner{
-
 }
 
 .gallary-block{
@@ -147,9 +154,6 @@
 .gallary-block-right{
     width: 33%;
     display: flex;
-    /* align-items: center; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
 }
 
 .gallary-block-img{
@@ -177,6 +181,10 @@
 .contact-form-block input,select,textarea{
     width: 50%;
     min-width: 370px;
+    border: solid 1px black;
+    padding: 1px;
+    padding-block: 0px;
+    padding-inline: 0px;
 }
 
 .contact-form-block textarea{
@@ -184,14 +192,11 @@
     height: 100px;
 }
 
-
 /* sns */
 .sns{
     display: flex;
     margin: 100px 0;
 }
-
-.sns-inner{}
 
 .sns-block-first{
     display: flex;
@@ -214,7 +219,6 @@
     width: 200px;
     height: 60px;
     align-items: center;
-    /* align-content: center; */
 }
 
 .sns-block-content :hover{
@@ -254,6 +258,10 @@
         width: 100%;
     }
 
+    .header-inner{
+        margin:20px 25px;
+    }
+
     .header-rogo{
         font-size: 40px;
     }
@@ -261,26 +269,37 @@
     /*×ボタン*/
     
     /*ハンバーガーボタン*/
-    .add-header-nav li{
-        font-size: 26px;
-    }
+.hamburger__btn{
+    font-size: 40px;
+}
 
-    /* モーダルウィンドウ */
+.add-header-nav{
+    width: 100%;
+}
+
+.add-header-nav li{
+    font-size: 24px;
+}
+
+/* モーダルウィンドウ */
     
+.add-modal-sp{
+    display: none; 
+}
+
+
     /* mv-mob */
     .first-view{
         position: relative;
     }
 
     .first-view img{
-        width: 100%;
-        height: 100%;
+        height: 100vh;
     }
 
     .mv-text{
         top: 50%;
-        right: 0%;
-        font-size: 20px;
+        left: 50%;
     }
 
     /* gallary-mob */
@@ -313,11 +332,19 @@
     /* contact-mob */
     .contact-form-block{
         display: block;
+        height: 90px;
+        margin: 20px;
     }
 
     .contact-form-block input,select,textarea{
         min-width: 100%;
+        height: 50px;
+        margin-top: 10px
     }
+
+    .contact-form-block textarea{
+    height: 130px;
+}
 
     /* sns-mob */
     .sns{
@@ -331,6 +358,11 @@
     .sns-block-second{
         display: block;
     }
+
+    .sns-block-content a{
+        padding:15px 15px;
+        font-size: 22px
+}
 
     /* footer-mob */
     .footer{
