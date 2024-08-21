@@ -51,9 +51,9 @@
     position: relative;
     width: 100%;
     height: 30px;
-  }
+}
   
-  .batsu::before, .batsu::after { /* 共通設定 */
+.batsu::before, .batsu::after { /* 共通設定 */
     content: "";
     position: absolute;
     top: 50%;
@@ -61,15 +61,15 @@
     width: 5px; /* 棒の幅（太さ） */
     height: 30px; /* 棒の高さ */
     background: #333;
-  }
+}
   
-  .batsu::before {
+.batsu::before {
     transform: translate(-50%,-50%) rotate(45deg);
-  }
+}
   
-  .batsu::after {
+.batsu::after {
     transform: translate(-50%,-50%) rotate(-45deg);
-  }
+}
   
 /*ハンバーガーボタン*/
 .hamburger__btn{
@@ -118,9 +118,11 @@
 
 .mv-text{
     position: absolute;
-    top: 50%;
+    /* top: 50%;
     right: 0%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%); */
+    top: calc((371 / 810) * 100%);
+    right: 140px;
     color: white;
     font-size: 40px;
 }
@@ -154,6 +156,7 @@
 .gallary-block-right{
     width: 33%;
     display: flex;
+    justify-content: center;
 }
 
 .gallary-block-img{
@@ -236,17 +239,15 @@
     text-align: center;
     padding: 30px 0; 
     background-color:#335D91;
-    color:white;
-    
+    color:white;  
 }
 
 /* レスポンシブ */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 767px){
     /* common-mob */
     .common-wrapper{
-        max-width: 800px;
+        max-width: 600px;
     }
-
     .common-wrapper h2{
         font-size: 30px;
         margin: 30px;
@@ -265,28 +266,24 @@
     .header-rogo{
         font-size: 40px;
     }
-
-    /*×ボタン*/
     
     /*ハンバーガーボタン*/
-.hamburger__btn{
-    font-size: 40px;
-}
-
-.add-header-nav{
-    width: 100%;
-}
-
-.add-header-nav li{
-    font-size: 24px;
-}
-
-/* モーダルウィンドウ */
+    .hamburger__btn{
+        font-size: 40px;
+    }
     
-.add-modal-sp{
-    display: none; 
-}
+    .add-header-nav{
+        width: 100%;
+    }
+    
+    .add-header-nav li{
+        font-size: 24px;
+    }
 
+    /* モーダルウィンドウ */
+    .add-modal-sp{
+    display: none; 
+    }
 
     /* mv-mob */
     .first-view{
@@ -295,11 +292,13 @@
 
     .first-view img{
         height: 100vh;
+        width: 100vw;
     }
 
     .mv-text{
-        top: 50%;
-        left: 50%;
+        top: calc((371 / 810) * 100%);
+        right: 30px;
+        font-size: 30px;
     }
 
     /* gallary-mob */
@@ -322,11 +321,11 @@
 
     .gallary-block-img{
         margin: 20px;
-        height: 250px;
+        height: 300px;
     }
 
     .gallary-block-img img{
-        object-fit: cover; /*効いていない*/
+        object-fit: cover; 
     }
 
     /* contact-mob */
@@ -339,12 +338,12 @@
     .contact-form-block input,select,textarea{
         min-width: 100%;
         height: 50px;
-        margin-top: 10px
+        margin-top: 10px;
     }
 
     .contact-form-block textarea{
-    height: 130px;
-}
+        height: 130px;
+    }
 
     /* sns-mob */
     .sns{
@@ -362,7 +361,7 @@
     .sns-block-content a{
         padding:15px 15px;
         font-size: 22px
-}
+    }
 
     /* footer-mob */
     .footer{
@@ -371,6 +370,3 @@
         font-size: 12px;
     }   
 }
-
-
-
