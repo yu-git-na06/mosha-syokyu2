@@ -116,6 +116,10 @@
     width: 100%;
 }
 
+.first-view img{
+    width: 100%;
+}
+
 .mv-text{
     position: absolute;
     /* top: 50%;
